@@ -17,7 +17,7 @@ body {
   min-height: 300px;
   border: 1px solid steelblue;
   padding: 30px;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 .header {
@@ -29,7 +29,7 @@ body {
 
 .btn {
   display: inline-block;
-  background: #000;
+  background: #1e0202;
   color: #fff;
   border: none;
   padding: 10px 20px;
