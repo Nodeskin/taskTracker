@@ -17,7 +17,7 @@ body {
   min-height: 300px;
   border: 1px solid steelblue;
   padding: 30px;
-  border-radius: 6px;
+  border-radius: 5px;
 }
 
 .header {
@@ -72,7 +72,7 @@ body {
 }
 
 .add-form {
-  margin-bottom: 40px;
+  margin-bottom: 42px;
 }
 
 .form-control {
