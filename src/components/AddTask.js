@@ -21,7 +21,6 @@ const AddTask = ({ onAdd }) => {
 
   return (
     <form className="add-form" onSubmit={onSubmit}>
-        
       <div className="form-control form-control-check">
         <label>Task</label>
         <input
@@ -41,7 +40,7 @@ const AddTask = ({ onAdd }) => {
           onChange={(e) => setDay(e.target.value)}
         />
       </div>
-
+ 
       <div className="form-control">
         <label>Set Reminder</label>
         <input

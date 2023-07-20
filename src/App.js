@@ -3,8 +3,9 @@ import Header from "./components/Header";
 import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
 
+
 const TravApp = () => {
-  const [showAddTask, setShowAddTask] = useState(true);
+  const [showAddTask, setShowAddTask] = useState(false);
   const [tasks, setTasks] = useState([
     {
       id: 1,
@@ -26,14 +27,33 @@ const TravApp = () => {
     },
   ]);
 
+  const texty =  {
+    id: 3,
+   task : {
+    text: "Food Shopping",
+    day: "Feb 5th at 2:40pm",
+    reminder: true
+  }
+  }
+
+  // const newVar = {id, ...texty.task}
+  
+
   // Add Task
   const addTask = (task) => {
-    // console.log(task)         //{text: 'vvvv', day: '', reminder: false}
+    console.log(task)         
     const id = Math.floor(Math.random() * 10000) + 1;
     // console.log(id);
 
     const newTask = { id, ...task };
+    // console.log('This is old task', newTask)
     setTasks([...tasks, newTask]);
+
+    // const newTasks = { id, task };
+    // console.log('This is new task', newTasks)
+    
+
+  
   };
 
   //Delete Task
@@ -53,13 +73,13 @@ const TravApp = () => {
 
   return (
     <div className="container">
-      <Header onAdd={() => setShowAddTask(!showAddTask)} />
+      <Header onAdd={() => setShowAddTask(!showAddTask)} showAdd={showAddTask}/>
       {showAddTask && <AddTask onAdd={addTask} />}
+
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={deleteTask} onToggle={ToggleReminder} />
-      ) : (
-        "No Task"
-      )}
+      ) : ( "No Task" )}
+
     </div>
   );
 };
